@@ -21,8 +21,16 @@ espressione = espressione.slice(0, -1);
 espressione = '0';
 }
 break;
+case '=':
+try {
+const risultato = eval(espressione.replaceAll(',', '.'));
+espressione = String(risultato).replace('.', ',');
+} catch (errore) {
+espressione = 'Errore';
+}
+break;
 default:
-if (espressione === '0') {
+if (espressione === '0' || espressione === 'Errore') {
 espressione = valore;
 } else {
 espressione = espressione + valore;
