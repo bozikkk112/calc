@@ -7,6 +7,10 @@ resta nascosto */
 border-radius: 0.375rem;
 overflow: hidden;
 }
+/* un'espressione lunga va a capo invece di uscire dal riquadro */
+#display {
+overflow-wrap: anywhere;
+}
 /* una sola regola per tutti i tasti, invece delle stesse classi ripetute venti
 volte */
 #tastiera .btn {
